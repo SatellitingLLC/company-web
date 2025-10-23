@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | Satelliting</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, rgba(59, 130, 246, 0.2), transparent 55%), #0f172a;
+        color: #e2e8f0;
+        min-height: 100%;
+      }
+      body {
+        margin: 0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+        text-align: center;
+        background: inherit;
+      }
+      .card {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 1.5rem;
+        padding: 3rem 2.5rem;
+        max-width: 32rem;
+        box-shadow: 0 24px 72px -32px rgba(59, 130, 246, 0.45);
+      }
+      .signal {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 1.5rem;
+        background: rgba(59, 130, 246, 0.15);
+        border-radius: 9999px;
+        display: grid;
+        place-items: center;
+        font-size: 1.75rem;
+        color: #60a5fa;
+      }
+      h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        letter-spacing: -0.01em;
+      }
+      p {
+        margin: 0 0 2rem;
+        color: rgba(226, 232, 240, 0.75);
+        line-height: 1.7;
+      }
+      .cta {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+      }
+      .cta a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.9rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .cta a.primary {
+        background: linear-gradient(135deg, #3b82f6, #22d3ee);
+        color: #0f172a;
+        box-shadow: 0 12px 30px -12px rgba(34, 211, 238, 0.65);
+      }
+      .cta a.secondary {
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        color: rgba(226, 232, 240, 0.85);
+        background: rgba(15, 23, 42, 0.6);
+      }
+      .cta a:hover {
+        transform: translateY(-2px);
+      }
+      @media (min-width: 640px) {
+        .cta {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="signal">🛰️</div>
+      <h1>Signal lost</h1>
+      <p>
+        The destination you requested isn't on our current orbital map. Choose a new vector below to reconnect with
+        Satelliting.
+      </p>
+      <div class="cta">
+        <a class="primary" href="/">Return home</a>
+        <a class="secondary" href="/contact">Contact Satelliting</a>
+      </div>
+    </div>
+  </body>
+</html>
