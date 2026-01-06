@@ -1,0 +1,33 @@
+---
+
+---
+
+<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+  <div class="absolute inset-0 bg-space-gradient"></div>
+
+  <div class="absolute inset-0 star-field opacity-40"></div>
+
+  <div
+    class="absolute top-1/4 -left-32 w-96 h-96 bg-nebula-cyan/10 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-1/4 -right-32 w-96 h-96 bg-aurora-green/10 rounded-full blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-nebula-blue/5 rounded-full blur-3xl"
+  >
+  </div>
+
+  <div class="stars-container absolute inset-0">
+    {
+      Array.from({ length: 50 }).map((_, i) => (
+        <div
+          class="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
+          style={`left: ${Math.random() * 100}%; top: ${Math.random() * 100}%; animation-delay: ${Math.random() * 3}s; opacity: ${0.3 + Math.random() * 0.7};`}
+        />
+      ))
+    }
+  </div>
+</div>

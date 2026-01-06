@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Satelliting LLC - Let's launch your next digital initiative together."
+>
+  <section class="py-24 relative">
+    <div class="absolute inset-0 bg-nebula-glow opacity-50"></div>
+    <div
+      class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+    >
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-nebula-cyan text-sm font-medium mb-8"
+      >
+        <span class="w-2 h-2 bg-aurora-green rounded-full animate-pulse"></span>
+        Remote-first partnership
+      </div>
+
+      <h1 class="section-heading text-4xl md:text-5xl mb-6">
+        Let's launch your next digital initiative
+      </h1>
+
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        Satelliting LLC operates fully online so we can plug into teams
+        anywhere. Share what you're building and we'll align on the roadmap, the
+        squad, and the timelines to accelerate it.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-[1.4fr_1fr] gap-10">
+        <div class="card-space p-8 md:p-10">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-14 h-14 rounded-2xl bg-nebula-cyan/20 flex items-center justify-center text-nebula-cyan"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-widest text-nebula-cyan/70"
+              >
+                Get in touch
+              </p>
+              <h2 class="text-2xl font-display font-semibold text-white">
+                Send us a message
+              </h2>
+            </div>
+          </div>
+
+          <ContactForm />
+        </div>
+
+        <div class="space-y-6">
+          <div class="card-space p-6">
+            <div class="flex items-center gap-3 text-nebula-cyan mb-4">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h3 class="text-lg font-display font-semibold">
+                Engagement lanes
+              </h3>
+            </div>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 w-2 h-2 rounded-full bg-nebula-cyan flex-shrink-0"
+                ></span>
+                <span>Product launches, redesigns, and roadmaps</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 w-2 h-2 rounded-full bg-nebula-cyan flex-shrink-0"
+                ></span>
+                <span>Marketing sites, growth experiments, and funnels</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-2 w-2 h-2 rounded-full bg-nebula-cyan flex-shrink-0"
+                ></span>
+                <span>Design systems, component audits, and implementation</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="card-space p-6">
+            <div class="flex items-center gap-3 text-nebula-cyan mb-4">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <h3 class="text-lg font-display font-semibold">
+                Virtual sessions
+              </h3>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Prefer a live conversation? We host 30-minute video calls to align
+              on scope, metrics, and squad resourcing once we understand your
+              goals.
+            </p>
+            <div class="bg-space-700/50 rounded-xl p-4">
+              <p class="text-sm font-semibold text-nebula-cyan mb-1">
+                Availability
+              </p>
+              <p class="text-sm text-gray-400">
+                Weekdays across EST and PST, with async updates for distributed
+                teams.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-space p-6 border-dashed border-nebula-cyan/50">
+            <h3
+              class="text-lg font-display font-semibold text-nebula-cyan mb-2"
+            >
+              Direct email
+            </h3>
+            <a
+              href="mailto:jordan@satelliting.space"
+              class="text-white hover:text-nebula-cyan transition-colors"
+            >
+              jordan@satelliting.space
+            </a>
+            <p class="text-gray-500 text-sm mt-2">
+              We typically respond within 48 business hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

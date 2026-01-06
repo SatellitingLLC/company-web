@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = await getCollection("projects");
+const featuredProjects = projects.slice(0, 3);
+---
+
+<BaseLayout title="Home">
+  <section
+    class="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+  >
+    <div class="absolute inset-0 bg-nebula-glow"></div>
+
+    <div
+      class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+    >
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-nebula-cyan text-sm font-medium mb-8 animate-float"
+      >
+        <span class="w-2 h-2 bg-aurora-green rounded-full animate-pulse"></span>
+        Remote-first web studio
+      </div>
+
+      <h1
+        class="section-heading text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight"
+      >
+        Launch stellar web<br />experiences with us
+      </h1>
+
+      <p
+        class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
+      >
+        Crafting modern interfaces that orbit your brand goals. From concept to
+        deployment, we partner with you to create digital products that delight
+        and perform.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary text-lg">
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          Launch a project
+        </a>
+        <a href="/projects" class="btn-secondary text-lg"> View our work </a>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-space-900 to-transparent"
+    >
+    </div>
+  </section>
+
+  <section class="py-24 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span
+          class="text-nebula-cyan text-sm font-semibold uppercase tracking-widest"
+          >Portfolio</span
+        >
+        <h2 class="section-heading text-4xl md:text-5xl mt-4">
+          Featured Projects
+        </h2>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+          A snapshot of recent launches that showcase our versatility and craft.
+        </p>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/projects" class="btn-secondary">
+          View all projects
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 relative">
+    <div class="absolute inset-0 bg-aurora-gradient"></div>
+    <div
+      class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+    >
+      <div class="card-space p-12 md:p-16">
+        <h2 class="section-heading text-3xl md:text-4xl mb-6">
+          Ready to build something extraordinary?
+        </h2>
+        <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+          Tell us about your vision and we'll craft a launch plan tailored to
+          your goals.
+        </p>
+        <a href="/contact" class="btn-primary text-lg">
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            ></path>
+          </svg>
+          Connect with us
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

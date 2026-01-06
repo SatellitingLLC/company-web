@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = await getCollection("projects");
+---
+
+<BaseLayout
+  title="Projects"
+  description="Explore our portfolio of web projects - From marketing sites to web applications."
+>
+  <section class="py-24 relative">
+    <div class="absolute inset-0 bg-nebula-glow opacity-50"></div>
+    <div
+      class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+    >
+      <span
+        class="text-nebula-cyan text-sm font-semibold uppercase tracking-widest"
+        >Portfolio</span
+      >
+      <h1 class="section-heading text-4xl md:text-5xl mt-4 mb-6">
+        Our Project Portfolio
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        A collection of launches that showcase our versatility and craft across
+        industries.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="card-space p-12 text-center bg-gradient-to-br from-nebula-cyan/20 to-aurora-green/10"
+      >
+        <h2 class="section-heading text-3xl mb-6">Have a project in mind?</h2>
+        <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can bring your vision to life with a stellar web
+          experience.
+        </p>
+        <a href="/contact" class="btn-primary text-lg">
+          Start a conversation
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

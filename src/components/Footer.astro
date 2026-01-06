@@ -1,0 +1,90 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/contact", label: "Contact" },
+];
+---
+
+<footer
+  class="relative z-10 border-t border-white/10 bg-space-900/80 backdrop-blur-sm"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="space-y-4">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="relative w-10 h-10">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-nebula-cyan to-aurora-green rounded-full opacity-20"
+            >
+            </div>
+            <img
+              src="/logo.png"
+              alt="Satelliting"
+              class="w-full h-full object-contain relative z-10"
+            />
+          </div>
+          <span class="text-lg font-display font-semibold text-white"
+            >Satelliting LLC</span
+          >
+        </a>
+        <p class="text-gray-400 text-sm max-w-xs">
+          Crafting modern web experiences that orbit your brand goals. From
+          concept to deployment.
+        </p>
+      </div>
+
+      <div>
+        <h3
+          class="text-sm font-semibold text-nebula-cyan uppercase tracking-wider mb-4"
+        >
+          Navigation
+        </h3>
+        <ul class="space-y-2">
+          {
+            footerLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-gray-400 hover:text-nebula-cyan transition-colors text-sm"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3
+          class="text-sm font-semibold text-nebula-cyan uppercase tracking-wider mb-4"
+        >
+          Connect
+        </h3>
+        <a
+          href="mailto:jordan@satelliting.space"
+          class="text-gray-400 hover:text-nebula-cyan transition-colors text-sm"
+        >
+          jordan@satelliting.space
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4"
+    >
+      <p class="text-gray-500 text-sm">
+        &copy; {currentYear} Satelliting LLC. All rights reserved.
+      </p>
+      <a
+        href="/sitemap.xml"
+        class="text-gray-500 hover:text-gray-400 text-sm transition-colors"
+      >
+        Sitemap
+      </a>
+    </div>
+  </div>
+</footer>
