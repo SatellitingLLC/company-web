@@ -43,23 +43,3 @@
     @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
 }
-
-@layer utilities {
-  .star-field {
-    background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
-      radial-gradient(
-        2px 2px at 40px 70px,
-        rgba(255, 255, 255, 0.8),
-        transparent
-      ),
-      radial-gradient(1px 1px at 90px 40px, white, transparent),
-      radial-gradient(
-        2px 2px at 130px 80px,
-        rgba(255, 255, 255, 0.6),
-        transparent
-      ),
-      radial-gradient(1px 1px at 160px 120px, white, transparent);
-    background-size: 200px 200px;
-    animation: twinkle 4s ease-in-out infinite alternate;
-  }
-}
