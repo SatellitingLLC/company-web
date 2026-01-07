@@ -1,7 +1,7 @@
 ---
 title: "MidJits"
 description: "A virtual world where players collect, care for, and play with adorable creatures called MidJits in a whimsical online adventure."
-image: "https://placehold.co/600x400/png?text=MidJits"
+image: "/images/projects/midjits.jpg"
 link: "https://midjits.com"
 featured: false
 order: 6

@@ -4,7 +4,9 @@ import { getCollection } from "astro:content";
 import ProjectCard from "../components/ProjectCard.astro";
 
 const projects = await getCollection("projects");
-const featuredProjects = projects.slice(0, 3);
+const featuredProjects = projects
+  .filter((project) => project.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout title="Home">
