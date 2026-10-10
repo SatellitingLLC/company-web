@@ -6,12 +6,12 @@ export const site = {
   description:
     "Satelliting LLC is a remote-first web studio. We design, build, host, and maintain fast, search-friendly websites for businesses that want to be found.",
   themeColor: "#04122b",
-  email: "jordan@satelliting.space",
+  email: "satelliting.official@gmail.com",
   github: "https://github.com/Satelliting",
   nav: [
-    { label: "About", href: "/about", hideOnMobile: true },
-    { label: "Projects", href: "/projects", hideOnMobile: true },
-    { label: "Contact", href: "/contact", hideOnMobile: false },
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
+    { label: "Contact", href: "/contact" },
   ],
   cta: { label: "Start a project", href: "/contact" },
 } as const;

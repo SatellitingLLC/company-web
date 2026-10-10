@@ -22,4 +22,4 @@ Other buttons: `pnpm build`, `pnpm start`, `pnpm lint`.
 
 ## Houston, we have a problem
 
-Say hi: [jordan@satelliting.space](mailto:jordan@satelliting.space)
+Say hi: [satelliting.official@gmail.com](mailto:satelliting.official@gmail.com)

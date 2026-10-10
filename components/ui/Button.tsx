@@ -15,8 +15,9 @@ export function buttonClassName(variant: Variant = "primary", size: Size = "md")
 type ButtonProps = Omit<ComponentProps<typeof Link>, "className"> & {
   variant?: Variant;
   size?: Size;
+  className?: string;
 };
 
-export function Button({ variant = "primary", size = "md", ...props }: ButtonProps) {
-  return <Link className={buttonClassName(variant, size)} {...props} />;
+export function Button({ variant = "primary", size = "md", className, ...props }: ButtonProps) {
+  return <Link className={[buttonClassName(variant, size), className].filter(Boolean).join(" ")} {...props} />;
 }

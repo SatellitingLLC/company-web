@@ -37,13 +37,111 @@
   padding: 0;
 }
 
+.mobileActions {
+  display: none;
+}
+
+.mobilePanel {
+  display: none;
+}
+
 @media (max-width: 560px) {
-  .list {
-    gap: 1rem;
-    font-size: 0.95rem;
+  .desktopNav {
+    display: none;
   }
 
-  .hideSm {
-    display: none;
+  .mobileActions {
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(27, 63, 122, 0.8);
+    background: rgba(13, 45, 99, 0.35);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .bars > span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .toggle[aria-expanded="true"] .bars > span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .toggle[aria-expanded="true"] .bars > span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle[aria-expanded="true"] .bars > span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobilePanel {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem 1.25rem;
+    background: rgba(4, 18, 43, 0.97);
+    border-bottom: 1px solid rgba(27, 63, 122, 0.6);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+    animation: drop 0.18s ease;
+  }
+
+  .mobileList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: min(1160px, 100% - 2.5rem);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobileList a:not([class*="btn"]) {
+    display: block;
+    padding: 0.8rem 0.25rem;
+    font-size: 1.1rem;
+  }
+
+  .mobileList li:last-child {
+    margin-top: 0.6rem;
+  }
+
+  .mobileList li:last-child a {
+    display: block;
+    text-align: center;
+  }
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
